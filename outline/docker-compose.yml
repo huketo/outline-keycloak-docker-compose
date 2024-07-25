@@ -170,6 +170,7 @@ services:
       - keycloak-network
     extra_hosts:
       - "${OUTLINE_OIDC_HOSTNAME}:${OUTLINE_OIDC_DOCKER_GATEWAY}"
+      - "${OUTLINE_HOSTNAME}:${OUTLINE_OIDC_DOCKER_GATEWAY}"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/"]
       interval: 10s
